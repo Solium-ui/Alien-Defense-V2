@@ -28,7 +28,7 @@ export const addXp = wrapServiceBoundary(async function addXp(client, guild, mem
 
     levelData.xp += xpToAdd;
     levelData.totalXp += xpToAdd;
-    levelData.lastMessage = Date.now();
+    levelData.lastMessage = new Date();
 
     let xpNeededForNextLevel = getXpForLevel(levelData.level);
     let didLevelUp = false;
